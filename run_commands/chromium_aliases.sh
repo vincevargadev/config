@@ -17,7 +17,7 @@ alias cago=chromium_app_google
 chromium_wrapper() {
   local url="$1"
   shift 1
-  nohup chromium https://$url "$@" & > /dev/null 2>&1
+  nohup chromium https://$url "$@" > /dev/null 2>&1
 }
 
 chromium_github() {
@@ -41,7 +41,7 @@ chromium_google() {
 chromium_app_wrapper() {
   local url="$1"
   shift 1
-  nohup chromium --app=https://$url "$@" & > /dev/null 2>&1
+  nohup chromium --app=https://$url "$@" > /dev/null 2>&1
 }
 
 chromium_app_github() {
