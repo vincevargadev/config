@@ -17,48 +17,48 @@ alias cago=chromium_app_google
 chromium_wrapper() {
   local url="$1"
   shift 1
-  nohup chromium https://$url "$@" > /dev/null 2>&1
+  nohup chromium https://$url "$@" > /dev/null 2>&1 &
 }
 
 chromium_github() {
-  nohup chromium https://github.com/$1 > /dev/null 2>&1
+  nohup chromium https://github.com/$1 > /dev/null 2>&1 &
 }
 
 chromium_pubdev() {
-  nohup chromium https://pub.dev/packages/$1 > /dev/null 2>&1
+  nohup chromium https://pub.dev/packages/$1 > /dev/null 2>&1 &
 }
 
 chromium_youtube() {
   local search=$(echo "$@" | tr " " "+")
-  nohup chromium "https://www.youtube.com/results?search_query=$search" > /dev/null 2>&1
+  nohup chromium "https://www.youtube.com/results?search_query=$search" > /dev/null 2>&1 &
 }
 
 chromium_google() {
   local search=$(echo "$@" | tr " " "+")
-  nohup chromium "https://www.google.com/search?q=$search" > /dev/null 2>&1
+  nohup chromium "https://www.google.com/search?q=$search" > /dev/null 2>&1 &
 }
 
 chromium_app_wrapper() {
   local url="$1"
   shift 1
-  nohup chromium --app=https://$url "$@" > /dev/null 2>&1
+  nohup chromium --app=https://$url "$@" > /dev/null 2>&1 &
 }
 
 chromium_app_github() {
-  nohup chromium --app=https://github.com/$1 > /dev/null 2>&1
+  nohup chromium --app=https://github.com/$1 > /dev/null 2>&1 &
 }
 
 chromium_app_pubdev() {
-  nohup chromium --app=https://pub.dev/packages/$1 > /dev/null 2>&1
+  nohup chromium --app=https://pub.dev/packages/$1 > /dev/null 2>&1 &
 }
 
 chromium_app_youtube() {
   local search=$(echo "$@" | tr " " "+")
-  nohup chromium --app="https://www.youtube.com/results?search_query=$search" > /dev/null 2>&1
+  nohup chromium --app="https://www.youtube.com/results?search_query=$search" > /dev/null 2>&1 &
 }
 
 chromium_app_google() {
   local search=$(echo "$@" | tr " " "+")
-  nohup chromium --app="https://www.google.com/search?q=$search" > /dev/null 2>&1
+  nohup chromium --app="https://www.google.com/search?q=$search" > /dev/null 2>&1 &
 }
 
