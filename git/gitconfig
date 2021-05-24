@@ -16,7 +16,7 @@
 	adp = add -p
 	cmt = commit -m
 [commit]
-	template = /Users/vince/.config/git/commit-message-template
+	template = ~/.config/git/commit-message-template
 [credential]
   helper = cache
 
