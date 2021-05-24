@@ -1,0 +1,22 @@
+# Add the following to your ~/.gitconfig file:
+# [include]
+#   path = ~/.config/git/gitconfig
+[core]
+	editor = nvim
+	excludesfile = /Users/vince/.gitignore
+[alias]
+	br = "!git branch | grep '^\\*\\ .*'"
+	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%C(green bold)(%ad)%C(white bold) - %s %C(bold blue)<%an%Creset%C(blue), %ae%C(bold blue)> %Creset%Cgreen%ar%Creset' --abbrev-commit --date=format:'%Y %b %d, %H:%M'
+	df = diff --cached
+	dlog = log -u
+	aliaslist = "!git config -l | grep alias | cut -c 7- | sed 's/=.*//'"
+	aliases = "!git config -l | grep alias | cut -c 7-"
+	st = status
+	sts = status -s
+	adp = add -p
+	cmt = commit -m
+[commit]
+	template = /Users/vince/.config/git/commit-message-template
+[credential]
+  helper = cache
+
