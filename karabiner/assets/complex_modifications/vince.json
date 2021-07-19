@@ -1,0 +1,26 @@
+{
+  "title": "whololo you are now a backspace button",
+  "rules": [
+     {
+      "description": "Change Command + Spacebar to Backspace",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
