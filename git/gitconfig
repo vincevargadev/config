@@ -44,6 +44,8 @@
 	ch = checkout
 	# Checkout the default HEAD main branch
 	chd = "!git checkout $(git dbr)"
+	# Delete all branches except current and main branch
+	dab = !git branch | grep -ve "$(git dbr)$" | grep -ve "$(git br)$" | xargs git branch -D
 
 	# Create new branch
 	cb = checkout -b
