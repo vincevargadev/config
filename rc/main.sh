@@ -6,6 +6,10 @@
 # by executing the following command:
 # $ echo "source ~/.config/rc/main.sh" >> ~/.zshrc
 
+
+# Source the list of oh-my-zsh plugins
+source ~/.config/rc/zsh_plugins.sh
+
 # Source aliases for commonly used programs.
 source ~/.config/rc/aliases/main.sh
 
