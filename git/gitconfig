@@ -25,6 +25,7 @@
 	
 	# Status
 	s = status
+	st = status
 	ss = status -s
 	
 	a = add
