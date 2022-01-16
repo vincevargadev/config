@@ -27,6 +27,7 @@
 	s = status
 	ss = status -s
 	
+	a = add
 	# Add in interactive mode
 	ap = add --patch .
 
