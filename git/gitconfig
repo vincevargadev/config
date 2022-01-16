@@ -46,6 +46,14 @@
 
 	# Create new branch
 	cb = checkout -b
+
+	# Push
+	ps = push
+	psf = push --force
+
+	# Pull
+	pll = pull
+	pl = pull --ff-only
 [commit]
 	template = ~/.config/git/commit-message-template
 [credential]
