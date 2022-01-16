@@ -37,6 +37,8 @@
 	cm = commit --message
 	# Edit commit message
 	ec = commit --amend
+	# Undo commit but keep changes
+	uc = reset HEAD^
 
 	# Checkout
 	ch = checkout
