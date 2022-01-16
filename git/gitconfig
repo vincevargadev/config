@@ -52,8 +52,11 @@
 
 	# Push
 	ps = push
+	psh = push
 	fps = push --force
-	psf = fps
+	fpsh = push --force
+	psf = push --force
+	pshf = push --force
 
 	# Pull
 	pll = pull
