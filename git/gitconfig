@@ -35,6 +35,7 @@
 	c = commit
 	# Commit with a commit message
 	cm = commit --message
+	cmt = commit --message
 	# Edit commit message
 	ec = commit --amend
 	# Undo commit but keep changes
