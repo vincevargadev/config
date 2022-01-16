@@ -15,7 +15,8 @@
 
 	# Show a nicely formatted git log
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%C(green bold)(%ad)%C(white bold) - %s %C(bold blue)<%an%Creset%C(blue), %ae%C(bold blue)> %Creset%Cgreen%ar%Creset' --abbrev-commit --date=format:'%Y %b %d, %H:%M'
-	dlog = log -u
+	# Show detailed log with changes
+	dlg = log -u
 	
 	# Show staged changes
 	df = diff --staged
@@ -25,23 +26,26 @@
 	aliases = "!git config -l | grep alias | cut -c 7-"
 	
 	# Status
-	st = status
-	sts = status -s
+	s = status
+	ss = status -s
 	
 	# Add in interactive mode
-	adp = add --patch
+	ap = add --patch .
 
 	# Commit
 	c = commit
 	# Commit with a commit message
 	cm = commit -m
+	# Edit commit message
+	ec = commit --amend
 
 	# Checkout
 	ch = checkout
-	# Create new branch
-	cb = checkout -b
 	# Checkout the default HEAD main branch
 	chd = "!git checkout $(git dbr)"
+
+	# Create new branch
+	cb = checkout -b
 [commit]
 	template = ~/.config/git/commit-message-template
 [credential]
