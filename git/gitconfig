@@ -31,6 +31,7 @@
 	a = add
 	# Add in interactive mode
 	ap = add --patch .
+	adp = add --patch .
 
 	# Commit
 	c = commit
