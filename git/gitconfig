@@ -61,6 +61,12 @@
 	# Force pull
 	fpl = !git fetch --all && git reset --hard origin/$(git br)
 	plf = fpl
+
+	# Restore
+	rs = restore
+	rss = restore --staged
+	rsa = restore .
+	rssa = restore --staged .
 [commit]
 	template = ~/.config/git/commit-message-template
 [credential]
