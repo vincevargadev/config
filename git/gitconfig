@@ -1,22 +1,49 @@
 # Add the following to your ~/.gitconfig file:
 # [include]
-#   path = ~/.config/git/gitconfig
+#	path = ~/.config/git/gitconfig
+
 [core]
 	editor = nvim
 	excludesfile = /Users/vince/.gitignore
 [alias]
-	br = "!git branch | grep '^\\*\\ .*'"
+	# br = "!git branch | grep '^\\*\\ .*'"
+	
+	# Show the current branch
+	br = branch --show-current
+	# Show default branch
+	dbr = "!git remote show $(git remote) | sed -n '/HEAD branch/s/.*: //p'"
+
+	# Show a nicely formatted git log
 	lg = log --graph --pretty=format:'%Cred%h%Creset %C(yellow)%d%C(green bold)(%ad)%C(white bold) - %s %C(bold blue)<%an%Creset%C(blue), %ae%C(bold blue)> %Creset%Cgreen%ar%Creset' --abbrev-commit --date=format:'%Y %b %d, %H:%M'
-	df = diff --cached
 	dlog = log -u
+	
+	# Show staged changes
+	df = diff --staged
+
+	# Learn more about currently enabled aliases
 	aliaslist = "!git config -l | grep alias | cut -c 7- | sed 's/=.*//'"
 	aliases = "!git config -l | grep alias | cut -c 7-"
+	
+	# Status
 	st = status
 	sts = status -s
-	adp = add -p
-	cmt = commit -m
+	
+	# Add in interactive mode
+	adp = add --patch
+
+	# Commit
+	c = commit
+	# Commit with a commit message
+	cm = commit -m
+
+	# Checkout
+	ch = checkout
+	# Create new branch
+	cb = checkout -b
+	# Checkout the default HEAD main branch
+	chd = "!git checkout $(git dbr)"
 [commit]
 	template = ~/.config/git/commit-message-template
 [credential]
-  helper = cache
+	helper = cache
 
