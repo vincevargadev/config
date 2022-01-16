@@ -34,7 +34,7 @@
 	# Commit
 	c = commit
 	# Commit with a commit message
-	cm = commit -m
+	cm = commit --message
 	# Edit commit message
 	ec = commit --amend
 
