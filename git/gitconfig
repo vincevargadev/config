@@ -20,8 +20,8 @@
 	df = diff --staged
 
 	# Learn more about currently enabled aliases
-	al = "!git config -l | grep alias | cut -c 7- | sed 's/=.*//'"
-	ali = "!git config -l | grep alias | cut -c 7-"
+	al = "!git config -l | grep alias | cut -c 7- | sed 's/=.*//' | sort"
+	ali = "!git config -l | grep alias | cut -c 7- | sort"
 	
 	# Status
 	s = status
