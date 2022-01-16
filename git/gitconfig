@@ -6,8 +6,6 @@
 	editor = nvim
 	excludesfile = /Users/vince/.gitignore
 [alias]
-	# br = "!git branch | grep '^\\*\\ .*'"
-	
 	# Show the current branch
 	br = branch --show-current
 	# Show default branch
