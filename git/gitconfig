@@ -52,11 +52,15 @@
 
 	# Push
 	ps = push
-	psf = push --force
+	fps = push --force
+	psf = fps
 
 	# Pull
 	pll = pull
 	pl = pull --ff-only
+	# Force pull
+	fpl = !git fetch --all && git reset --hard origin/$(git br)
+	plf = fpl
 [commit]
 	template = ~/.config/git/commit-message-template
 [credential]
