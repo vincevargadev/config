@@ -1,2 +1,7 @@
 configstore
 
+# File to contain information about last sync.
+# This file helps to calculate some expensive operations
+# at the beginning of the day.
+last_synchronized.txt
+

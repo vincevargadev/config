@@ -36,3 +36,5 @@ plugins=(
   ### Other tools ###
   # fzf
 )
+
+
