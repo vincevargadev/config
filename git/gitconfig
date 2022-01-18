@@ -73,6 +73,7 @@
 	rss = restore --staged
 	rsa = restore .
 	rssa = restore --staged .
+	rlrl = !git restore --staged . && git restore .
 [commit]
 	template = ~/.config/git/commit-message-template
 [credential]
