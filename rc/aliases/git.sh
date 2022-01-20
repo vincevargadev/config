@@ -1,8 +1,4 @@
-alias g=git
-alias gi=g
-alias gti=g
-alias gt=g
-alias igt=g
+alias {g,gi,gti,gt,igt}=git
 
 # Generate shorthand aliases without spaces
 #
