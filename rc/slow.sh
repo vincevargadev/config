@@ -11,7 +11,13 @@ then
     echo "Config folder is clean. Pulling..."
     git -C ~/.config pull --ff-only
   else
-    echo "Uncommitted changes in your config folder"
+    echo "There are uncommitted changes in your config folder."
+    echo "The latest configs could not be pulled."
+    echo ""
+    echo "To fix this, open the config folder, clean up and pull manually."
+    echo "\$ cd ~/.config"
+    echo "\$ git status # Then commit, stash or restore"
+    echo ""
   fi 
 
  echo $_TODAY > ~/.config/last_synchronized.txt
