@@ -10,6 +10,12 @@ cd && git clone https://github.com/vincevargadev/config.git && mv config .config
 
 Install brew https://brew.sh/
 
+Restore your Brewfile
+
+```
+cd ~/.config/brew && brew bundle
+```
+
 Add this line to your `.zshrc` file
 
 ```
