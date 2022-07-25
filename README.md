@@ -22,6 +22,8 @@ Add this line to your `.zshrc` file
 source ~/.config/rc/main.sh
 ```
 
+install vimplug https://github.com/junegunn/vim-plug#neovim
+
 After this, run `source ~/.zshrc` to load the changes.
 
 Now, all aliases, etc should be available for you.
