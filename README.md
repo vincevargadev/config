@@ -8,7 +8,7 @@ Clone this repository into `~/.config`:
 cd && git clone https://github.com/vincevargadev/config.git && mv config .config
 ```
 
-Install brew https://brew.sh/
+Install brew https://brew.sh/ Install ohmy https://ohmyz.sh/#install
 
 Restore your Brewfile
 
