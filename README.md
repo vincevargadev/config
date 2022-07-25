@@ -2,6 +2,14 @@
 
 ## Initial setup
 
+Clone this repository into `~/.config`:
+
+```
+cd && git clone https://github.com/vincevargadev/config.git && mv config .config
+```
+
+Install brew https://brew.sh/
+
 Add this line to your `.zshrc` file
 
 ```
