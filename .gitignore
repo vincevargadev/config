@@ -5,3 +5,6 @@ configstore
 # at the beginning of the day.
 last_synchronized.txt
 
+# This may contain secrets for GitHub
+gh/hosts.yml
+
