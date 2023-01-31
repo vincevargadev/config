@@ -3,7 +3,7 @@
 #	path = ~/.config/git/gitconfig
 
 [core]
-	editor = nvim
+	editor = hx
 	excludesfile = /Users/vince/.gitignore
 [alias]
 	# Show the current branch
