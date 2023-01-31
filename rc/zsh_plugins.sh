@@ -37,14 +37,14 @@ plugins=(
   # fzf
 )
 
-if ! source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh;
+if ! source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh;
 then
   echo "Install autosuggestions first with homebrew"
   echo "https://formulae.brew.sh/formula/zsh-autosuggestions"
   echo "$ brew install zsh-autosuggestions"
 fi
 
-if ! source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh;
+if ! source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh;
 then
   echo "Install autosuggestions first with homebrew"
   echo "https://formulae.brew.sh/formula/zsh-syntax-highlighting"
