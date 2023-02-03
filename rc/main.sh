@@ -6,9 +6,6 @@
 # by executing the following command:
 # $ echo "source ~/.config/rc/main.sh" >> ~/.zshrc
 
-# Set prompt
-export PS1='\[%\{\$fg\[red\]%\}%n%\{\$reset_color%\}@%\{\$fg\[magenta\]%\}%m%\{\$reset_color%\}:%\{\$fg\[blue\]%\}%~%\{\$reset_color%\}\$\(git_prompt_info\)\]$\n%\#\'
-
 # Run slow commands if necessary
 source ~/.config/rc/slow.sh
 
