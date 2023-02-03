@@ -6,6 +6,10 @@
 # by executing the following command:
 # $ echo "source ~/.config/rc/main.sh" >> ~/.zshrc
 
+# Set the oh-my-zsh config path
+# https://github.com/ohmyzsh/ohmyzsh#custom-directory
+export ZSH="$HOME/.config/oh-my-zsh"
+
 # Run slow commands if necessary
 source ~/.config/rc/slow.sh
 
