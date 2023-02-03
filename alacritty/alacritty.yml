@@ -48,34 +48,27 @@ live_config_reload: true
 # Shoud display the render timer
 debug.render_timer: false
 
-# Colors (Gruvbox dark)
+# ayu_mirage (https://gist.github.com/agoose77/14f94d07847c189a13b7d1d3c1b53cfe)
 colors:
-  # Default colors
   primary:
-    # hard contrast: background = '0x1d2021'
-    # normal contrast: background: '0x282828'
-    background: '0x32302f'
-    foreground: '0xebdbb2'
-
-  # Normal colors
+    background: '#1f2430'
+    foreground: '#cbccc6'
+    bright_foreground: '#f28779'
   normal:
-    black:   '0x282828'
-    red:     '0xcc241d'
-    green:   '0x98971a'
-    yellow:  '0xd79921'
-    blue:    '0x458588'
-    magenta: '0xb16286'
-    cyan:    '0x689d6a'
-    white:   '0xa89984'
-
-  # Bright colors
+    black: '#212733'
+    red: '#f08778'
+    green: '#53bf97'
+    yellow: '#fdcc60'
+    blue: '#60b8d6'
+    magenta: '#ec7171'
+    cyan: '#98e6ca'
+    white: '#fafafa'
   bright:
-    black:   '0x928374'
-    red:     '0xfb4934'
-    green:   '0xb8bb26'
-    yellow:  '0xfabd2f'
-    blue:    '0x83a598'
-    magenta: '0xd3869b'
-    cyan:    '0x8ec07c'
-    white:   '0xebdbb2'
-
+    black: '#686868'
+    red: '#f58c7d'
+    green: '#58c49c'
+    yellow: '#ffd165'
+    blue: '#65bddb'
+    magenta: '#f17676'
+    cyan: '#9debcf'
+    white: '#ffffff'
