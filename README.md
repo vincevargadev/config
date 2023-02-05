@@ -5,6 +5,10 @@
 Add this line to your `.zshrc` file
 
 ```
+git clone https://github.com/vincevargadev/config.git .config
+```
+
+```
 source ~/.config/rc/main.sh
 ```
 
