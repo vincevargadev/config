@@ -1,7 +1,116 @@
+# If you want to see the changes, run :config-reload.
+
+# Visit https://docs.helix-editor.com/configuration.html
+# for more config options and description.
+
+# If you wish to see the different themes, run :theme
+# and then you can tab through them and see the theme
+# change instantly.
+#
+# If this value is changed, it might be interesting to
+# also update the alacritty config with the new theme.
 theme = "ayu_mirage"
 
 [editor]
+
+# Change to relative line numbers so that it is easier
+# to jump n lines up and down with 4j, 5k, etc.
+# todo: how about both?
 line-number = "relative"
 
+# Always display the open buffers at the top of the window.
+# Usually displays the filename at the top.
+bufferline = "always"
+
+# The ruler helps you find out how long your lines should be.
+# This is a sane default value, can be overridden by
+# language specific rulers in the languages.toml file.
+rulers = [60, 80]
+
+[editor.file-picker]
+
+# By default, Helix hides hidden files (files starting with a .dot).
+# As a developer, you need to work with "hidden" files very often,
+# for example: .gitignore, .github folder, .idea configs, etc.
+# so it makes no sense to have them hidden.
+hidden = false
+
+[keys.normal]
+
+# In Helix, normally you would need semicolon ; to deselect
+# a selection, and you would need comma , to get rid of multiple
+# cursors (and you can duplicate cursors with C).
+# That is way too complicated so we make it so
+# that a simple esc will suffice.
+# Explained here: https://www.youtube.com/watch?v=aiSI6vdZWgE
+esc = ["collapse_selection", "keep_primary_selection"]
+
+# I just couldn't figure out how to do it "idiomatically"
+# in Helix, so for now...
+# https://github.com/LGUG2Z/helix-vim/blob/master/config.toml
+C = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection", "insert_mode"]
+
+# For jumping to the previous/next paragraph, Helix uses
+# "unimpaired"-style mapping:
+# [p for previous paragraph, and for the next paragraph ]p.
+# Those also select, so if we want to get Vim's
+# prev/next paragraph {} behavior, we also need to collapse
+# the selection. 
+"{" = ["goto_prev_paragraph", "collapse_selection"]
+"}" = ["goto_next_paragraph", "collapse_selection"]
+
+# The default way of going to the start of the line with Helix is: gh
+0 = ["goto_line_start", ":sh dart ~/helix_trainer.dart gh go to line start"]
+# The default way of going to the end of the line with Helix is: gl
+"$" = ["goto_line_end", ":sh dart ~/helix_trainer.dart gl go to line end"]
+# The default way of going to the first non-blank char in line with Helix is: gs
+"^" = ["goto_first_nonwhitespace", ":sh dart ~/helix_trainer.dart gs go to first non-blank in line"]
+
+# Better file picker a la Luke Pighetti
+#
+# Explained here: https://www.youtube.com/watch?v=X9_z_gynvmM
+# Gist here: https://gist.github.com/lukepighetti/8e4a13db5bdcd68a7d83eee19051ab14
+C-f = [":new", ":insert-output lf-pick", ":theme default", "select_all", "split_selection_on_newline", "goto_file", "goto_last_modified_file", ":buffer-close!", ":theme ayu_mirage"]
+
+# The command+/ keys will comment/uncomment the current line
+# and it will move the cursor down.
+#
+# This is helpful when you want to comment out a larger code block
+# and just blask command+/ as you move over the lines.
+# "A-c" = ["toggle_comments", "move_line_down"]
+#
+# TODO: Find it why it doesn't work...
+
+# The default behavior for Ctrl+c only toggles the line
+# (uncomment/comment), but doesn't move the line.
+# That is annoying when I want to quickly comment out a couple
+# of lines in sequence.
+"C-c" = ["toggle_comments", "move_line_down"]
+
+
+# "space" = { ""= ":w" }
+
+# Change cursor shape depending on mode
+# https://github.com/helix-editor/helix/wiki/FAQ#change-cursor-shape-on-mode-change-bar-cursor-on-insert-mode-block-on-normal-mode-etc
 [editor.cursor-shape]
+
+# Replace the "block" cursor shape as it would be hard
+# to see where exactly you are inserting
 insert = "bar"
+
+# This is also the default value, left it there so it's
+# easy to change later if desired.
+normal = "block"
+
+# Change to "underline" for select mode so that it is
+# easily distinguishable from the normal mode.
+select = "underline"
+
+
+[editor.lsp]
+
+# Language servers can provide editors with hints to show in a document.
+# This could be type hints, function argument names, etc.
+# https://helix-editor.com/news/release-23-03-highlights/#inlay-hints
+display-inlay-hints = true
+# enable = true
