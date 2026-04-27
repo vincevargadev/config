@@ -2,6 +2,10 @@
 # [include]
 #	path = ~/.config/git/gitconfig
 
+# [branch]
+# 	autosetupmerge = always
+# 	autosetuprebase = always
+
 [core]
 	editor = hx
 	excludesfile = /Users/vince/.gitignore

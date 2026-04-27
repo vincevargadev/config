@@ -3,6 +3,15 @@
 # https://github.com/wwwdata/vim-config/blob/master/alacritty/alacritty.yml
 
 
+# This should (hopefully) fix the issue where some colors
+# of the helix editor within a tmux session are off.
+#
+# https://www.reddit.com/r/HelixEditor/comments/13gmz2b/weird_colors_change_when_helix_inside_tmux/
+# https://gist.github.com/andersevenrud/015e61af2fd264371032763d4ed965b6#alacritty
+env:
+  TERM: xterm-256color
+# Didn't work, didn't fix the color issue and broke the emoji support
+
 # Configuration for Alacritty, the GPU enhanced terminal emulator
 window:
   dimensions:
@@ -49,26 +58,154 @@ live_config_reload: true
 debug.render_timer: false
 
 # ayu_mirage (https://gist.github.com/agoose77/14f94d07847c189a13b7d1d3c1b53cfe)
+# colors:
+  # primary:
+    # background: '#1f2430'
+    # foreground: '#cbccc6'
+    # bright_foreground: '#f28779'
+  # normal:
+    # black: '#212733'
+    # red: '#f08778'
+    # green: '#53bf97'
+    # yellow: '#fdcc60'
+    # blue: '#60b8d6'
+    # magenta: '#ec7171'
+    # cyan: '#98e6ca'
+    # white: '#fafafa'
+  # bright:
+    # black: '#686868'
+    # red: '#f58c7d'
+    # green: '#58c49c'
+    # yellow: '#ffd165'
+    # blue: '#65bddb'
+    # magenta: '#f17676'
+    # cyan: '#9debcf'
+    # white: '#ffffff'
+
+
+# https://github.com/alebelcor/alacritty-snazzy/blob/master/snazzy.yml
+# colors:
+
+  # primary:
+    # background: '#282a36'
+    # foreground: '#eff0eb'
+
+  # cursor:
+    # cursor: '#97979b'
+
+  # selection:
+    # text:       '#282a36'
+    # background: '#feffff'
+
+  # normal:
+    # black:   '#282a36'
+    # red:     '#ff5c57'
+    # green:   '#5af78e'
+    # yellow:  '#f3f99d'
+    # blue:    '#57c7ff'
+    # magenta: '#ff6ac1'
+    # cyan:    '#9aedfe'
+    # white:   '#f1f1f0'
+
+  # bright:
+    # black:   '#686868'
+    # red:     '#ff5c57'
+    # green:   '#5af78e'
+    # yellow:  '#f3f99d'
+    # blue:    '#57c7ff'
+    # magenta: '#ff6ac1'
+    # cyan:    '#9aedfe'
+    # white:   '#eff0eb'
+
+# https://github.com/alacritty/alacritty-theme/blob/master/themes/nightfox.yaml
+# Colors (NightFox)
+# colors:
+  # primary:
+    # background: '0x192330'
+    # foreground: '0xcdcecf'
+  # normal:
+    # black:   '0x393b44'
+    # red:     '0xc94f6d'
+    # green:   '0x81b29a'
+    # yellow:  '0xdbc074'
+    # blue:    '0x719cd6'
+    # magenta: '0x9d79d6'
+    # cyan:    '0x63cdcf'
+    # white:   '0xdfdfe0'
+  # bright:
+    # black:   '0x575860'
+    # red:     '0xd16983'
+    # green:   '0x8ebaa4'
+    # yellow:  '0xe0c989'
+    # blue:    '0x86abdc'
+    # magenta: '0xbaa1e2'
+    # cyan:    '0x7ad5d6'
+    # white:   '0xe4e4e5'
+
+### Light theme for sunny days.
+### Catppuccin Latte?
 colors:
   primary:
-    background: '#1f2430'
-    foreground: '#cbccc6'
-    bright_foreground: '#f28779'
+    background: '#EFF1F5'
+    foreground: '#4C4F69'
+    dim_foreground: '#4C4F69'
+    bright_foreground: '#4C4F69'
+  cursor:
+    text: '#EFF1F5'
+    cursor: '#DC8A78'
+  vi_mode_cursor:
+    text: '#EFF1F5'
+    cursor: '#7287FD'
+  search:
+    matches:
+      foreground: '#EFF1F5'
+      background: '#6C6F85'
+    focused_match:
+      foreground: '#EFF1F5'
+      background: '#40A02B'
+  footer_bar:
+    foreground: '#EFF1F5'
+    background: '#6C6F85'
+  hints:
+    start:
+      foreground: '#EFF1F5'
+      background: '#DF8E1D'
+    end:
+      foreground: '#EFF1F5'
+      background: '#6C6F85'
+  selection:
+    text: '#EFF1F5'
+    background: '#DC8A78'
   normal:
-    black: '#212733'
-    red: '#f08778'
-    green: '#53bf97'
-    yellow: '#fdcc60'
-    blue: '#60b8d6'
-    magenta: '#ec7171'
-    cyan: '#98e6ca'
-    white: '#fafafa'
+    black: '#5C5F77'
+    red: '#D20F39'
+    green: '#40A02B'
+    yellow: '#DF8E1D'
+    blue: '#1E66F5'
+    magenta: '#EA76CB'
+    cyan: '#179299'
+    white: '#ACB0BE'
   bright:
-    black: '#686868'
-    red: '#f58c7d'
-    green: '#58c49c'
-    yellow: '#ffd165'
-    blue: '#65bddb'
-    magenta: '#f17676'
-    cyan: '#9debcf'
-    white: '#ffffff'
+    black: '#6C6F85'
+    red: '#D20F39'
+    green: '#40A02B'
+    yellow: '#DF8E1D'
+    blue: '#1E66F5'
+    magenta: '#EA76CB'
+    cyan: '#179299'
+    white: '#BCC0CC'
+  dim:
+    black: '#5C5F77'
+    red: '#D20F39'
+    green: '#40A02B'
+    yellow: '#DF8E1D'
+    blue: '#1E66F5'
+    magenta: '#EA76CB'
+    cyan: '#179299'
+    white: '#ACB0BE'
+  indexed_colors:
+    - index: 16
+      color: '#FE640B'
+    - index: 17
+      color: '#DC8A78'
+
