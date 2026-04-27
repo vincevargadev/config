@@ -16,7 +16,10 @@ theme = "catppuccin_latte"
 
 # Change to relative line numbers so that it is easier
 # to jump n lines up and down with 4j, 5k, etc.
-# todo: how about both?
+#
+# Displaying both the line number and relative line number
+# does not seem to be possible. Follow discussion here:
+# https://github.com/helix-editor/helix/discussions/6990
 line-number = "relative"
 
 # Always display the open buffers at the top of the window.
@@ -58,17 +61,6 @@ esc = ["collapse_selection", "keep_primary_selection"]
 # https://github.com/LGUG2Z/helix-vim/blob/master/config.toml
 # THIS CLASHES WITH MULTICURSOR
 # "C-S-c" = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection", "insert_mode"]
-
-# Make gl not only jump, but select, too.
-# https://github.com/helix-editor/helix/issues/1630#issuecomment-1086877610
-#
-# This allows for a intuitive alternative to Vim's
-# C to change until line end, and
-# D to delete until line end.
-#
-# Now in Helix, type: glc to change from current cursor until end of line.
-g = { l = ["select_mode", "goto_line_end", "normal_mode"]}
-# g = { l = ["select_mode", "goto_line_end", "normal_mode"]}
 
 # For jumping to the previous/next paragraph, Helix uses
 # "unimpaired"-style mapping:
@@ -184,7 +176,8 @@ j = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 k = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 
 # Change (delete and insert mode) from current cursor until the end of the line.
-c = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection", "insert_mode"]
+c = ["collapse_selection", "extend_to_line_end", "delete_selection", "insert_mode"]
+# c = ["collapse_selection", "extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection", "insert_mode"]
 
 # Reload Helix config.
 r = [":config-reload"]
@@ -210,3 +203,15 @@ p = ["jump_backward"]
 # Window mode.
 # By default it uses Ctrl+w.
 # w = "window_mode"
+
+[keys.normal.g]
+# Make gl not only jump, but select, too.
+# https://github.com/helix-editor/helix/issues/1630#issuecomment-1086877610
+#
+# This allows for a intuitive alternative to Vim's
+# C to change until line end, and
+# D to delete until line end.
+# Now in Helix, type: glc to change from current cursor until end of line.
+l = ["select_mode", "goto_line_end", "normal_mode"]
+h = ["select_mode", "goto_line_start", "normal_mode"]
+s = ["select_mode", "goto_first_nonwhitespace", "normal_mode"]

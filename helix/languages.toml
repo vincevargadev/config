@@ -1,0 +1,61 @@
+# https://docs.helix-editor.com/languages.html
+
+# Recognize .conf files as bash so syntax highlighting works.
+#
+# This is needed for, for example, tmux.conf.
+#
+# As specifying the file-types does not append but overwrite,
+# we took the latest set of file types from GitHub
+# and appended .conf to it.
+#
+# https://www.reddit.com/r/HelixEditor/comments/12iyyvz/comment/jfxilib/
+# https://github.com/helix-editor/helix/blob/master/languages.toml
+#
+# I also opened a PR, so in case the PR is accepted,
+# this workaround will no longer be needed only to syntax highlight
+# tmux.conf files.
+[[language]]
+name = "bash"
+file-types = [
+  "sh",
+  "bash",
+  "zsh",
+  "zshenv",
+  "zlogin",
+  "zlogout",
+  "zprofile",
+  "zshrc",
+  "eclass",
+  "ebuild",
+  "bazelrc",
+  "Renviron",
+  "zsh-theme",
+  "ksh",
+  "cshrc",
+  "tcshrc",
+  "bashrc_Apple_Terminal",
+  "zshrc_Apple_Terminal",
+  "conf",
+  # { glob = ".bash_history" },
+  # { glob = ".bash_login" },
+  # { glob = ".bash_logout" },
+  # { glob = ".bash_profile" },
+  # { glob = ".bashrc" },
+  # { glob = ".profile" },
+  # { glob = ".zshenv" },
+  # { glob = ".zlogin" },
+  # { glob = ".zlogout" },
+  # { glob = ".zprofile" },
+  # { glob = ".zshrc" },
+  # { glob = ".zimrc" },
+  # { glob = "APKBUILD" },
+  # { glob = "PKGBUILD" },
+  # { glob = ".bash_aliases" },
+  # { glob = ".Renviron" },
+  # { glob = ".xprofile" },
+  # { glob = ".xsession" },
+  # { glob = ".xsessionrc" },
+  # { glob = ".yashrc" },
+  # { glob = ".yash_profile" },
+  # { glob = ".hushlogin" },
+]
